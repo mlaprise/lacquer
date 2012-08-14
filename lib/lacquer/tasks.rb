@@ -5,6 +5,11 @@ namespace :lacquer do
       Lacquer::Varnishd.new.start
     end
 
+    desc "Compile Varnish VCL config file"
+    task :generate_vcl => :environment do
+      Lacquer::Varnishd.new.generate_vcl
+    end
+
     desc "Stop varnishd daemon using Lacquer's settings"
     task :stop => :environment do
       Lacquer::Varnishd.new.stop
