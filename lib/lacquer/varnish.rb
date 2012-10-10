@@ -72,7 +72,7 @@ module Lacquer
                :parameters    => server,
                :response      => response })
             else
-              puts "Error while trying to connect to #{server[:host]}:#{server[:port]} #{e}"
+              puts "WARNING : Error while trying to connect to #{server[:host]}:#{server[:port]} #{e}"
             end
           end
         end
