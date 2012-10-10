@@ -72,7 +72,7 @@ module Lacquer
                :parameters    => server,
                :response      => response })
             else
-              raise VarnishError.new("Error while trying to connect to #{server[:host]}:#{server[:port]} #{e}")
+              puts "Error while trying to connect to #{server[:host]}:#{server[:port]} #{e}"
             end
           end
         end
